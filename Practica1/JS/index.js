@@ -20,7 +20,7 @@ function WriteTextValue(){
 }
 
 function writeBoolValue(){
-    let boolValue = true;
+    let boolValue = false;
     prograph.textContent = boolValue;
     
 }
