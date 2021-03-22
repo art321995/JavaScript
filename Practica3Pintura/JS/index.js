@@ -10,5 +10,7 @@ function calcularCosto() {
     let resultado = altoPared * anchoPared * costoMateriales;
 
     let containerResultado = document.getElementById("resultado");
+
+    
    
 }
