@@ -12,5 +12,5 @@ function calcularCosto() {
     let containerResultado = document.getElementById("resultado");
 
     
-   
+   containerResultado.innerText = 'El costo es: $'+ resultado;
 }
