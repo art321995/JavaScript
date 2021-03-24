@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./../CSS/index.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <title>Pago Cheque</title>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Pago de Cheque</h1>
+        </header>
+        <div class="row mt-3s">
+            <div class="form-group">
+                <label for="hotel">Ingrese el total de los dia(s) de Hotel: </label>
+                <input type="text" name="" id="hotel" class="form-control" placeholder="" aria-describedby="helpId">
+                <small id="helpId" class="text-muted"></small>
+            </div>
+        </div>
+        <div class="row mt-3s">
+            <div class="form-group">
+                <label for="comida">Ingrese el total de los dia(s) de Comida:</label>
+                <input type="text" name="" id="comida" class="form-control" placeholder="" aria-describedby="helpId">
+                <small id="helpId" class="text-muted"></small>
+            </div>
+        </div>
+        <div class="row mt-3s">
+            <div class="form-group">
+                <label for="otro">Ingrese otros gastos (Rescuerde que solo son $100 por dia):</label>
+                <input type="text" name="" id="otro" class="form-control" placeholder="" aria-describedby="helpId">
+                <small id="helpId" class="text-muted"></small>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <button type="button" id="btnCalcularPago" class="btn btn-primary btn-lg btn-block">
+                Calcular Pago Cheque
+            </button>
+        </div>
+        <div class="row mt-3">
+            <div class="col-12">
+                <div class="alert alert-primary" role="alert">
+                    <span id="resultado"></span>
+                </div>
+            </div>
+        </div>
+
+
+        <script src="./../JS/index.js"></script>
+</body>
+
+</html>
