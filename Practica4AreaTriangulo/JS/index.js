@@ -1,8 +1,8 @@
 let btnCalcular = document.getElementById("btnCalcular");
 
-btnCalcular.addEventListener('click', calcularArea);
+btnCalcular.addEventListener("click", calcularAre);
 
-function calcularArea() {
+function calcularAre() {
     let base1 = Number(document.getElementById("Base").value);
     let altura1 = Number(document.getElementById("Altura").value);
 
@@ -10,6 +10,5 @@ function calcularArea() {
 
     let containerResultado = document.getElementById("resultado");
 
-    
-   
+    containerResultado.innerText = 'El Area del triangulo es: '+ resultado;
 }
