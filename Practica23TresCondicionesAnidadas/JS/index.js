@@ -9,7 +9,7 @@ function calcularPromedios(){
 
 
      if(Promedio >= 9){
-        resultado = `<div class = "alert alert-success"> Aprobado</div>`;
+        resultado = `<div class = "alert alert-success"> Aprobado </div>`;
      } else if(Promedio >= 6 && Promedio <9){
         resultado = "Regular";
      } else if(Promedio < 6){
