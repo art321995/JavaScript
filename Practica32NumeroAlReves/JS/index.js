@@ -5,11 +5,8 @@ btnCalcularNumero.addEventListener("click",calcularNumero);
 function calcularNumero(){
 
     let Numero = Number(document.getElementById("numero").value);
-    let A1 = Numero / 100;
-    let B1 = Numero - (A1 * 100);
-    let A2 = B1 / 10;
-    let B2 = B1 - (A2 * 10);
-
+    let A = Math.trunc(Numero/100);
+    let B = Numero % 10;
     let resultado= "";
 
     if(Numero <100 || Numero >1000 ){
@@ -17,11 +14,13 @@ function calcularNumero(){
         return;
     }
 
-    if (Numero == ((((B2*10)+A2)*10)+A1)){
-        resultado="El numero se escribe igual al reves";
-    }else{
-        resultado="EL numero no se escribe igual al reves";
-    }
+   if(A == B){
+
+    resultado = "Este numero "+Numero+" Si se le igual al reves"
+
+   }else{
+    resultado = "Este numero "+Numero+" No se le igual al reves"
+   }
 
     let resultContainer = document.getElementById("resultContainer");
 
