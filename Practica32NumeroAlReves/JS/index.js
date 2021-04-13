@@ -6,7 +6,7 @@ function calcularNumero(){
 
     let Numero = Number(document.getElementById("numero").value);
     let A1 = Numero / 100;
-    let B1 = Numero -(A1 * 100);
+    let B1 = Numero - (A1 * 100);
     let A2 = B1 / 10;
     let B2 = B1 - (A2 * 10);
 
@@ -17,10 +17,10 @@ function calcularNumero(){
         return;
     }
 
-    if (Numero ==((((B2*10)+A2)*10)+A1)){
-        resultado="El numero se escribe al reves igual";
+    if (Numero == ((((B2*10)+A2)*10)+A1)){
+        resultado="El numero se escribe igual al reves";
     }else{
-        resultado="EL numero no se escribe al reves";
+        resultado="EL numero no se escribe igual al reves";
     }
 
     let resultContainer = document.getElementById("resultContainer");
