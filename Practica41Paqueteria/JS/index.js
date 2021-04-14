@@ -6,7 +6,7 @@ function calcularEnvio(){
 
     let Gramos = Number(document.getElementById("gramos").value);
     let Zona =  document.getElementById("sltTipoZona").value;
-    let Envio = 0;
+    let Envio = "";
     let resultado = "";
 
     if(Gramos>5000){
@@ -14,16 +14,16 @@ function calcularEnvio(){
         return;
     }
 
-    if(Zona = "Zona1"){
+    if(Zona == "Zona1"){
         Envio = Gramos * 11;
         resultado = "El costo del envio del paquete es: $"+Envio+".00";
-    }else if (Zona = "Zona2"){
+    }else if (Zona == "Zona2"){
         Envio = Gramos * 10;
         resultado = "El costo del envio del paquete es: $"+Envio+".00";
-    }else if (Zona = "Zona3"){
+    }else if (Zona == "Zona3"){
         Envio = Gramos * 12;
         resultado = "El costo del envio del paquete es: $"+Envio+".00";
-    }else if (Zona = "Zona4"){
+    }else if (Zona == "Zona4"){
         Envio = Gramos * 24;
         resultado = "El costo del envio del paquete es: $"+Envio+".00";
     }else{
