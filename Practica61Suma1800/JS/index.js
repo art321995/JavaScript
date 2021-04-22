@@ -16,7 +16,7 @@ function evaluarSuma(){
         if(a % 2 == 0){
             b = b + 2; 
         }else{
-            b = b +3
+            b = b + 3;
         }
         a = a + 1;
     }
