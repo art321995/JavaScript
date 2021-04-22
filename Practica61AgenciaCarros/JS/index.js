@@ -20,13 +20,13 @@ function evaluarImpuesto(){
         clave = prompt(`Ingrese la calve del auto ${i}: `);
         if(clave == 1){
             impuesto = precio * .10;
-            clave1 = clave1 + impuesto;
+            clave1 = Number( clave1 + impuesto);
         }else if(clave == 2){
             impuesto = precio * .07;
-            clave2 = clave2 + impuesto;
+            clave2 = Number(clave2 + impuesto);
         }else if(clave == 3){
             impuesto = precio *.05;
-            clave3 = clave3 + impuesto;
+            clave3 = Number(clave3 + impuesto);
         }else {
             impuesto = alert("Solo puedes ingresar numeros del 1 al 3");
             return;
@@ -34,7 +34,7 @@ function evaluarImpuesto(){
         total = total + impuesto;
 
         let resulContainer = document.getElementById("resultContainer");
-        resulContainer.innerHTML=(`El auto numero ${i} paga de impuestos $${impuesto.toFixed(2)}`)
+        resulContainer.innerHTML+=(`El auto numero ${i} paga de impuestos $${impuesto.toFixed(2)}<br>`)
 
        
     }
