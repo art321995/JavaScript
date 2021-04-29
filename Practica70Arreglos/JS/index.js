@@ -22,7 +22,7 @@ function almacenarValores(event){
         alert("Debes de ingresar un numero");
         return;
     }
-    if (indice <= 4){
+    if (indice <= 10){
         numAlmacenados[indice] = Number (inpNumeros.value);
         indice++;
         inpNumeros.value = "";
