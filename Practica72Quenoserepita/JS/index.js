@@ -11,6 +11,8 @@ btnMostrarValores.addEventListener("click", mostrarValores);
 
 let longitudList = 0;
 let indice = 0;
+
+
 let numeroAlmacenados = [];
 
 function determinarLongitud(event){
