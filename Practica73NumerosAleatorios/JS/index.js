@@ -1,48 +1,59 @@
 const inpLongitud = document.getElementById("inpLongitud");
-const btnMostrarValores = document.getElementById("btnMostarValores");
+const btnMostrarValores = document.getElementById("btnMostrarValores");
+const resultContainer = document.getElementById("resultContainer");
 
-inpLongitud.addEventListener("keyup", determinarLongitud);
-btnMostrarValores.addEventListener("click",mostrarValores);
 
-let longitud = 0;
-let indice = 0;
-let numAleatorio = [];
+inpLongitud.addEventListener("keydown", determinarLongitud);
+btnMostrarValores.addEventListener("click", mostrarValores);
+
+let longitudList = 0;
+let array = [];
+
+function random(min, max){
+    console.log("ALMACENO"); 
+    let numeroAleatorioGenerado = Math.floor((Math.random() * (max - min + 1)) + min);
+    console.log(numeroAleatorioGenerado);
+    return numeroAleatorioGenerado;
+}
 
 function determinarLongitud(event){
-
+    console.log("PASO 1");
     if(event.key != "Enter"){
         return;
+    }else if(isNaN(inpLongitud.value) == true){
+        alert('Favor de ingresar un número entero')
+        return;
+    }else if(Number.isInteger(Number(inpLongitud.value)) == false){
+        alert('Favor de ingresar un número entero')
+        return;
+    }else{
+        longitud = Number(inpLongitud.value);
     }
-    longitud = Number(inpLongitud.value);
+
+    inpLongitud.disabled = true;
+    btnMostrarValores.disabled = false;
+    almacenarValores();
 }
 
-function random (min, max){
-    numAleatorio = Math.random();
-    return numAleatorio;
-}
-
-console.log(numAleatorio);
-
-function almacenarValores(){
-    for(let indice = 0; indice<= numAleatorio.length; indice++);{
-        numAleatorio = random (0, 9);
-    } 
-    console.log(numAleatorio);
-    numAleatorio[indice] = Number (numAleatorio);
-    indice++;
+function almacenarValores(){ 
+    console.log("PASO 2"); 
+    for(let index=0; index<longitud; index++){
+        array[index] = random(0,9);
+        console.log(array);
+    }
 }
 
 function mostrarValores(){
-    const lstValoresAlmacenados = document.getElementById("contenedorResultado");
+    console.log("PASO 3"); 
+    let resultado = "";
+    let suma = 0;
 
-    let mensajeResultado = "";
-
-    for(let indice = 0; indice < numAleatorio.length; indice++){
-        mensajeResultado += `<li class="list-group-item">El numero que se encuentra en el indice ${indice} es: ${numAleatorio[indice]}</li>`;
+    for(let index=0; index<longitud; index++){
+        suma += array[index];
+        resultado += `<li class="list-group-item"> Array[${index}] = ${array[index]} </li>`;
     }
 
-    lstValoresAlmacenados.innerHTML = mensajeResultado;
+    resultado +=`<li class="list-group-item"> La suma de los valores es ${suma} </li>`;
 
-    numAleatorio =[];
-    indice = 0;
+    resultContainer.innerHTML = resultado;
 }
