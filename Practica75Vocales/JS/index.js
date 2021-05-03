@@ -26,8 +26,6 @@ function AlmacenarPalabra(event){
 }
 
 function validarPalabra(){
-    let indice1 = 0;
-
     let letrasPermitidas = ["a","e","i","o","u"];
 
     for(let indicePalabras = 0; indicePalabras<palabras.length; indicePalabras++){
@@ -46,7 +44,7 @@ function mostrarVocales(){
     let resultado = "";
 
     for(let indice=0; indice<PalabrasConvocales.length; indice++){ 
-        resultado += `<li class="list-group-item"> Arreglo numero ${indice} cuenta con la palabra ${PalabrasConvocales} </li>`;
+        resultado += `<li class="list-group-item"> Indice ${indice} cuenta con la palabra ${PalabrasConvocales} </li>`;
     }
 
     lstPalabras.innerHTML = resultado;
