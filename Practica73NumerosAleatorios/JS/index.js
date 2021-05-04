@@ -17,7 +17,6 @@ function random(min, max){
 }
 
 function determinarLongitud(event){
-    console.log("PASO 1");
     if(event.key != "Enter"){
         return;
     }else if(isNaN(inpLongitud.value) == true){
@@ -36,7 +35,6 @@ function determinarLongitud(event){
 }
 
 function almacenarValores(){ 
-    console.log("PASO 2"); 
     for(let index=0; index<longitud; index++){
         array[index] = random(0,9);
         console.log(array);
@@ -44,13 +42,12 @@ function almacenarValores(){
 }
 
 function mostrarValores(){
-    console.log("PASO 3"); 
     let resultado = "";
     let suma = 0;
 
     for(let index=0; index<longitud; index++){
         suma += array[index];
-        resultado += `<li class="list-group-item"> Array[${index}] = ${array[index]} </li>`;
+        resultado += `<li class="list-group-item"> Indice ${index} = ${array[index]} </li>`;
     }
 
     resultado +=`<li class="list-group-item"> La suma de los valores es ${suma} </li>`;
