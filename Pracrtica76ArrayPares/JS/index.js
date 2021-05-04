@@ -31,7 +31,7 @@ function MostrarRandom(min, max) {
   function mostrarValores{
 
     for (i = 0; i < longitud; i++) {        
-        numero[i] = randomI(0,256);
+        numero[i] = randomI(0,100);
         if (numero[i]%2 == 0) {
           numeropar.push(numero[i]);
         }
