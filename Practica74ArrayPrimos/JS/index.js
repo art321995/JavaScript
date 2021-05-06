@@ -8,22 +8,8 @@ btnMostrarValores.addEventListener("click", mostrarValores);
 let NumPrimo = [];
 
 function AlmacenarNumerosPrimos(){
-    let longitud = inpLongitud.value;
 
-if (isNaN(longitud == true)){
-    alert("Es necesario que ingrese un valor numerico");
-    return;
-}
-if(Number(longitud)<= 0){
-    alert("Ingrese una longitud valida");
-    return;
-}
-if(longitud == ""){
-    alert("Es neecsario que ingrese algun valor");
-    return;
-    }
-
-    for(let index = 0; index<=longitud; index++){
+    for(let index = 0; index<=1000; index++){
         let numero = Math.floor(Math.random()*(100 - 1 + 1) + 1);
         let isPrimo = ValidarNumeroPrimo(numero);
 
@@ -57,5 +43,5 @@ function mostrarValores(){
     lstValoresAlmacenados.innerHTML = mensajeResultado;
 
     NumPrimo =[];
-    indice = 0;
+    index = 0;
 }
