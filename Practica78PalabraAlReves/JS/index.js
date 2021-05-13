@@ -12,7 +12,7 @@ function almacenarArray(){
         if(isNaN(arrayPalabra) == false && arrayPalabra != null){
             alert("Ingrese una palabra");
         }else if(/\s/.test(arrayPalabra)){
-            alert("Ingrese una sola palabra");
+            alert("Ingrese sola una palabra");
         }else if(arrayPalabra == null){
             return;
         }else{
