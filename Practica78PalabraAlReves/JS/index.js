@@ -26,6 +26,6 @@ function almacenarArray(){
 }
 
 function mostrarPalabra(){
-    let resultContainer = "";
-    resultContainer.innerHTML = palabraReves;
+    let ContResult = document.getElementById("contenedorResultado");
+    ContResult.innerHTML = palabraReves;
 }

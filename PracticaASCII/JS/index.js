@@ -27,7 +27,7 @@ function alamecanarPalabra(){
     mostrarPalabra();  
 }
 function mostrarPalabra(){
-    let contenedorResultado = "";
+    let ContResult = document.getElementById("contenedorResultado");
     result += `<div class="mt-3"><br>Palabra resulante: [${ASCII}]</div>`;
-    contenedorResultado.innerHTML = result;
+    ContResult.innerHTML = palabraReves;
 }
