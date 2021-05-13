@@ -1,6 +1,6 @@
-const btnApp = document.getElementById("btnMostarValores");
+const btnMostrarValores = document.getElementById("btnMostarValores");
 
-btnApp.addEventListener("click", alamecanarPalabra);
+btnMostrarValores.addEventListener("click", alamecanarPalabra);
 
 let result = "";
 let ASCII = [];

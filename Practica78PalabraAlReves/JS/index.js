@@ -1,6 +1,6 @@
-const btnApp = document.getElementById("btnMostarValores");
+const btnMostrarValores = document.getElementById("btnMostarValores");
 
-btnApp.addEventListener("click", mostrarPalabra);
+btnMostrarValores.addEventListener("click", mostrarPalabra);
 
 let arrayPalabra = [];
 let arrayPalabraReves = [];
