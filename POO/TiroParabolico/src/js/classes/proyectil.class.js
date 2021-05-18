@@ -32,7 +32,7 @@ class Proyectil {
             tiempo += 0.01;
             let left = this.calcularDistanciX(tiempo);
             let bottom =  this.calcularDistanciY(tiempo);
-            if(left < 0 || bottom < 0 || left >= 100 || bottom >= 100){
+            if( bottom < 0 || bottom >= 100){
                 break;
             }
             this.posicionesLeft.push(left);
@@ -41,13 +41,4 @@ class Proyectil {
     }
 }
 
-let proyectil1 = new Proyectil(45,45);
 
-proyectil1.almacenarRecorrido();
-let posicionesX = proyectil1.posicionesLeft;
-console.log("🚀 ~ file: proyectil.class.js ~ line 48 ~ posicionesX", posicionesX)
-let posicionesY = proyectil1.posicionesBottom;
-console.log("🚀 ~ file: proyectil.class.js ~ line 50 ~ posicionesY", posicionesY)
-
-console.log(`distanciaX --> ${proyectil1.calcularDistanciX(3)}`);
-console.log(`distanciaY --> ${proyectil1.calcularDistanciY(5)}`);
