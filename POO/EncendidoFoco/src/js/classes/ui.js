@@ -16,5 +16,4 @@ function prenderEncenderFoco(){
 
     imgFoco.setAttribute("src", src);
 
-    return "./../img/off.png";
 }
