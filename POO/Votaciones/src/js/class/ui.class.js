@@ -36,6 +36,10 @@ class UI{
         btnFinalizar.innerText = "Finalizar";
         btnFinalizar.setAttribute("class", "btn btn-outline-danger btn-block");
         btnFinalizar.setAttribute("id", "btnFinalizar");
+        //Creamos el recuadro del Resultado de votaciones
+        const divResult = document.createElement("div");
+        divResult.setAttribute("class", "contenedorTexto");
+
 
 
         pantalla2.appendChild(divTexto);
@@ -43,6 +47,7 @@ class UI{
         pantalla2.appendChild(btnEncontra);
         pantalla2.appendChild(btnAbstencion);
         pantalla2.appendChild(btnFinalizar);
+        pantalla2.appendChild(divResult);
 
     }
 
@@ -51,6 +56,7 @@ class UI{
 
 
 let btnAceptar =  document.getElementById("btnAceptar");
+
 btnAceptar.addEventListener("click", eliminarPantallas);
 
 const votaciones = new Votaciones();
@@ -59,10 +65,25 @@ function eliminarPantallas(){
 
     ui.eliminarPantalla1();
     ui.crearPantalla2();
-    document.addEventListener("click", validarClick)
+    document.addEventListener("click", validarClick);
 
 }
 
 function validarClick(event){
+
+    if(event.target.id !== "btnFinalizar"){
     votaciones.increaseVote(event.target.id);
+}else{
+    divResult = (`
+    El numero de votos a favor es: ${votaciones.Afavor}
+    El numero de votos en contra es: ${votaciones.Encontra}
+    El numero de votos Abstencion es: ${votaciones.Abstencion}
+    `);
+
+    votaciones.Afavor = 0;
+    votaciones.Encontra = 0;
+    votaciones.Abstencion = 0;
+
+
+}
 }
